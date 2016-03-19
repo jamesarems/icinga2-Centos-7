@@ -13,4 +13,4 @@ cd icinga2-Centos-7
 
 chmod +x icinga2-installer.sh
 
-./icinga-installer.sh yourpassword
+./icinga2-installer.sh yourpassword
