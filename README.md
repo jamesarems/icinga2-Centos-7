@@ -7,7 +7,9 @@ Need minimal CentOS 7 machine with no SElinux.
 
 yum install git -y
 
-git clone 
+git clone https://github.com/jamesarems/icinga2-Centos-7.git
+
+cd icinga2-Centos-7
 
 chmod +x icinga2-installer.sh
 
