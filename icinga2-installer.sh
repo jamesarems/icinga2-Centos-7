@@ -128,4 +128,4 @@ echo "***********************************************************"
 echo "***********************************************************"
 
 echo "Cleaning Installer from your system."
-find / -iname icinga2-installer.sh exec rm -rf {} \;
+find / -name icinga2-installer.sh -exec rm -f {} \;
