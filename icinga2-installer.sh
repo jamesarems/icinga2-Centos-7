@@ -1,5 +1,5 @@
 #!/bin/bash
-IP=`ifconfig enp6s0 | awk '{ print $2}' | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
+IP=`ifconfig enp3s0 | awk '{ print $2}' | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
 PASSWD=`openssl passwd -1 $1`
 
 cd ~
