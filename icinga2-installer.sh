@@ -50,6 +50,7 @@ service httpd restart
 
 echo "CREATE DATABASE icingaweb2;" | mysql -u root
 echo "GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icingaweb2.* TO 'icingaweb2'@'localhost' IDENTIFIED BY 'icingaweb2';" | mysql -u root
+echo "Icinga2 Monitor Server  https://github.com/jamesarems" >> /etc/motd
 mysql icingaweb2 < /usr/share/icingaweb2/etc/schema/mysql.schema.sql
 echo "INSERT INTO icingaweb_user (name, active, password_hash) VALUES ('iadmin', 1, '$PASSWD');" | mysql icingaweb2
 
@@ -113,6 +114,8 @@ path                = "/var/run/icinga2/cmd/icinga2.cmd"
 
 
 
+
+
 echo "**********************************************************"
 echo "**********************************************************"
 echo "Icinga Web 2 token id:"
@@ -123,3 +126,6 @@ echo "        Password : $1 "
 echo "     NOTE : Enable monitor and document plugin"
 echo "***********************************************************"
 echo "***********************************************************"
+
+echo "Cleaning Installer from your system."
+find / -iname icinga2-installer.sh exec rm -rf {} \;
