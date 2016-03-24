@@ -1,10 +1,12 @@
 #!/bin/bash
-IP=`ifconfig enp3s0 | awk '{ print $2}' | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
-PASSWD=`openssl passwd -1 $1`
-HOST=`hostname -i"
-read -p "Please ensure that you added your hostname in hosts file and added to the system using hostname command, To continue press ENTER"
+
+read -p "Please ensure that you added your hostname in hosts file also added using hostname command (hostname set-hostname <FQDN> ) , To continue press ENTER to Cancel CTRL + C"
+
+HOST=`hostname -i`
 
 if [ "$2" == apache ] ; then
+PASSWD=`openssl passwd -1 $1`
+IP=`ifconfig enp3s0 | awk '{ print $2}' | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
 
 cd ~
 yum install epel-release -y
