@@ -1,6 +1,10 @@
 #!/bin/bash
 IP=`ifconfig enp3s0 | awk '{ print $2}' | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
 PASSWD=`openssl passwd -1 $1`
+HOST=`hostname -i"
+read -p "Please ensure that you added your hostname in hosts file and added to the system using hostname command, To continue press ENTER"
+
+if [ "$2" == apache ] ; then
 
 cd ~
 yum install epel-release -y
@@ -129,3 +133,10 @@ echo "***********************************************************"
 
 echo "Cleaning Installer from your system."
 find / -name icinga2-installer.sh -exec rm -f {} \;
+
+elif [ "$2" == nginx ]; then
+echo "Currently icinga2 with nginx under development . Please install using apache"
+
+else 
+echo "Wrong Key stroke , Please put correct value and try again or read documentation"
+fi
