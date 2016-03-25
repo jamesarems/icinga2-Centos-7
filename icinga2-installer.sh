@@ -140,5 +140,5 @@ elif [ "$2" == nginx ]; then
 echo "Currently icinga2 with nginx under development . Please install using apache"
 
 else 
-echo "Wrong Key stroke , Please put correct value and try again or read documentation"
+echo " $(tput setaf 1)Wrong Key stroke$(tput sgr0) , Please put correct value and try again or read documentation"
 fi
