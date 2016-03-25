@@ -19,8 +19,8 @@ chmod +x icinga2-installer.sh
 
 * To use with Apache server
 
- # ./icinga2-installer.sh <yourpassword> apache      
+ sh icinga2-installer.sh yourpassword apache      
 
 * To Use with Nginx server
 
- # ./icinga2-installer.sh <yourpassword> nginx
+ sh icinga2-installer.sh yourpassword nginx
