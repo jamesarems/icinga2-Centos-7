@@ -143,7 +143,7 @@ echo "**********************************************************"
 echo "**********************************************************"
 echo "Icinga Web 2 token id:"
 ./bin/icingacli setup token show
-echo "        Setup URL: http://$IP/icingaweb2"
+echo "        Setup URL: http://yourIP/icingaweb2"
 echo "        Username : iadmin"
 echo "        Password : $1 "
 echo "     NOTE : Enable monitor and document plugin"
